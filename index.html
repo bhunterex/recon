@@ -92,11 +92,12 @@
 
                     <button onclick="subdomainDork('site:*.*.*.*.*.*.*.example.com')" type="button" class="btn btn-outline-danger m-1">*.*.*.*.*.*.*.Google</button>
 
-		<button onclick="subdomainDork('https://hunter.how/list?searchValue=domain%3D%22example.com%22&timestamp=1731998971095')" type="button" class="btn btn-outline-danger m-1">hunter.how</button>
+		            <button onclick="subdomainDork('https://hunter.how/list?searchValue=domain%3D%22example.com%22&timestamp=1731998971095')" type="button" class="btn btn-outline-danger m-1">hunter.how</button>
 
                     <button onclick="subdomainDork('https://search.censys.io/search?resource=hosts&sort=RELEVANCE&per_page=25&virtual_hosts=EXCLUDE&q=example.com')" type="button" class="btn btn-outline-danger m-1">search.censys.io</button>
                     
                     <button onclick="subdomainDork('https://www.shodan.io/search?query=example.com')" type="button" class="btn btn-outline-danger m-1">shodan.io</button>
+
                     <button onclick="subdomainDork('https://www.bing.com/search?q=domain%3Avulnweb.com&qs=n&form=QBRE&sp=-1&lq=0&pq=domain%3Aexample.com&sc=0-18&sk=&cvid=254076E88676423F9EE4789865C87CC7&ghsh=0&ghacc=0&ghpl=')" type="button" class="btn btn-outline-danger m-1">Bing</button>
             </div>
         </div>
@@ -106,12 +107,8 @@
     <!-- vuln scan category 4 -->
     <div class="container-fluid">
         <div class="row text-center">
-            <div class="col-12">
+            <div class="col-6">
                 <h4 class="fw-bold">Technology detector:</h4>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-12">
                 <button onclick="gitDork('https://builtwith.com/example.com')" type="button" class="btn btn-outline-danger m-1">builtwith.com</button>
 
                 <button onclick="gitDork('https://webtechsurvey.com/website/example.com')" type="button" class="btn btn-outline-danger m-1">webtechsurvey.com</button>
@@ -119,7 +116,12 @@
                 <button onclick="gitDork('https://w3techs.com/sites/info/example.com')" type="button" class="btn btn-outline-danger m-1">w3techs.com</button>
 
                 <button onclick="genericDork('https://whatcms.org/?s=example.com')" type="button" class="btn btn-outline-danger m-1">whatcms.org</button>
+            </div>
+            <div class="col-6">
+                <h4 class="fw-bold">Origin IP finding:</h4>
+                <button onclick="genericDork('https://www.shodan.io/search?query=Ssl.cert.subject.CN%3A%22example.com%22+200')" type="button" class="btn btn-outline-danger m-1">shodan.io(Method 1)</button>
                 
+                <button onclick="genericDork('https://www.shodan.io/search?query=ssl%3A%22example.com%22+200')" type="button" class="btn btn-outline-danger m-1">shodan.io(Method 2)</button>
             </div>
         </div>
     </div>
